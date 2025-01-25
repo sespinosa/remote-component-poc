@@ -12,10 +12,12 @@ export default defineConfig({
       formats: ["es", "umd"], // Output both ES and UMD formats
     },
     rollupOptions: {
-      // Do not mark React or ReactDOM as external to include them in the bundle
-      external: [], // Empty array ensures nothing is externalized
+      external: ["react", "react-dom"], // React and ReactDOM are external
       output: {
-        globals: {}, // No global mappings needed since React is bundled
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+        },
       },
     },
     target: "esnext", // Use modern JavaScript for compatibility with modern browsers
