@@ -43,7 +43,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/App.tsx"), // Entry point for your library
+      entry: path.resolve(__dirname, "src/index.ts"), // Entry point for your library
       name: "RemoteComponentPOC", // Global name for UMD builds
       fileName: (format) => `remote-component-poc.${format}.js`,
       formats: ["es", "umd"], // Outputs both ESM and UMD builds

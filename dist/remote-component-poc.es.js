@@ -14,14 +14,14 @@ function Ot() {
   if (le) return m;
   le = 1;
   var H = Fe, D = Symbol.for("react.element"), T = Symbol.for("react.fragment"), z = Object.prototype.hasOwnProperty, b = H.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, U = { key: !0, ref: !0, __self: !0, __source: !0 };
-  function G(x, B, j) {
+  function R(x, B, j) {
     var M, C = {}, Q = null, p = null;
     j !== void 0 && (Q = "" + j), B.key !== void 0 && (Q = "" + B.key), B.ref !== void 0 && (p = B.ref);
     for (M in B) z.call(B, M) && !U.hasOwnProperty(M) && (C[M] = B[M]);
     if (x && x.defaultProps) for (M in B = x.defaultProps, B) C[M] === void 0 && (C[M] = B[M]);
     return { $$typeof: D, type: x, key: Q, ref: p, props: C, _owner: b.current };
   }
-  return m.Fragment = T, m.jsx = G, m.jsxs = G, m;
+  return m.Fragment = T, m.jsx = R, m.jsxs = R, m;
 }
 var v = {};
 /**
@@ -36,7 +36,7 @@ var v = {};
 var ze;
 function at() {
   return ze || (ze = 1, process.env.NODE_ENV !== "production" && function() {
-    var H = Fe, D = Symbol.for("react.element"), T = Symbol.for("react.portal"), z = Symbol.for("react.fragment"), b = Symbol.for("react.strict_mode"), U = Symbol.for("react.profiler"), G = Symbol.for("react.provider"), x = Symbol.for("react.context"), B = Symbol.for("react.forward_ref"), j = Symbol.for("react.suspense"), M = Symbol.for("react.suspense_list"), C = Symbol.for("react.memo"), Q = Symbol.for("react.lazy"), p = Symbol.for("react.offscreen"), _ = Symbol.iterator, fe = "@@iterator";
+    var H = Fe, D = Symbol.for("react.element"), T = Symbol.for("react.portal"), z = Symbol.for("react.fragment"), b = Symbol.for("react.strict_mode"), U = Symbol.for("react.profiler"), R = Symbol.for("react.provider"), x = Symbol.for("react.context"), B = Symbol.for("react.forward_ref"), j = Symbol.for("react.suspense"), M = Symbol.for("react.suspense_list"), C = Symbol.for("react.memo"), Q = Symbol.for("react.lazy"), p = Symbol.for("react.offscreen"), _ = Symbol.iterator, fe = "@@iterator";
     function Ie(e) {
       if (e === null || typeof e != "object")
         return null;
@@ -48,23 +48,23 @@ function at() {
       {
         for (var t = arguments.length, i = new Array(t > 1 ? t - 1 : 0), n = 1; n < t; n++)
           i[n - 1] = arguments[n];
-        Ge("error", e, i);
+        Re("error", e, i);
       }
     }
-    function Ge(e, t, i) {
+    function Re(e, t, i) {
       {
-        var n = F.ReactDebugCurrentFrame, o = n.getStackAddendum();
-        o !== "" && (t += "%s", i = i.concat([o]));
-        var g = i.map(function(r) {
-          return String(r);
+        var n = F.ReactDebugCurrentFrame, r = n.getStackAddendum();
+        r !== "" && (t += "%s", i = i.concat([r]));
+        var g = i.map(function(o) {
+          return String(o);
         });
         g.unshift("Warning: " + t), Function.prototype.apply.call(console[e], console, g);
       }
     }
-    var Re = !1, de = !1, me = !1, ve = !1, be = !1, $;
+    var Ge = !1, de = !1, me = !1, ve = !1, be = !1, $;
     $ = Symbol.for("react.module.reference");
     function Ue(e) {
-      return !!(typeof e == "string" || typeof e == "function" || e === z || e === U || be || e === b || e === j || e === M || ve || e === p || Re || de || me || typeof e == "object" && e !== null && (e.$$typeof === Q || e.$$typeof === C || e.$$typeof === G || e.$$typeof === x || e.$$typeof === B || // This needs to include all possible module reference object
+      return !!(typeof e == "string" || typeof e == "function" || e === z || e === U || be || e === b || e === j || e === M || ve || e === p || Ge || de || me || typeof e == "object" && e !== null && (e.$$typeof === Q || e.$$typeof === C || e.$$typeof === R || e.$$typeof === x || e.$$typeof === B || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
@@ -74,8 +74,8 @@ function at() {
       var n = e.displayName;
       if (n)
         return n;
-      var o = t.displayName || t.name || "";
-      return o !== "" ? i + "(" + o + ")" : i;
+      var r = t.displayName || t.name || "";
+      return r !== "" ? i + "(" + r + ")" : i;
     }
     function ee(e) {
       return e.displayName || "Context";
@@ -106,7 +106,7 @@ function at() {
           case x:
             var t = e;
             return ee(t) + ".Consumer";
-          case G:
+          case R:
             var i = e;
             return ee(i._context) + ".Provider";
           case B:
@@ -115,9 +115,9 @@ function at() {
             var n = e.displayName || null;
             return n !== null ? n : E(e.type) || "Memo";
           case Q: {
-            var o = e, g = o._payload, r = o._init;
+            var r = e, g = r._payload, o = r._init;
             try {
-              return E(r(g));
+              return E(o(g));
             } catch {
               return null;
             }
@@ -125,14 +125,14 @@ function at() {
         }
       return null;
     }
-    var h = Object.assign, R = 0, te, ie, ne, Ae, re, oe, ge;
+    var h = Object.assign, G = 0, te, ie, ne, Ae, oe, re, ge;
     function we() {
     }
     we.__reactDisabledLog = !0;
     function Ne() {
       {
-        if (R === 0) {
-          te = console.log, ie = console.info, ne = console.warn, Ae = console.error, re = console.group, oe = console.groupCollapsed, ge = console.groupEnd;
+        if (G === 0) {
+          te = console.log, ie = console.info, ne = console.warn, Ae = console.error, oe = console.group, re = console.groupCollapsed, ge = console.groupEnd;
           var e = {
             configurable: !0,
             enumerable: !0,
@@ -149,12 +149,12 @@ function at() {
             groupEnd: e
           });
         }
-        R++;
+        G++;
       }
     }
     function Pe() {
       {
-        if (R--, R === 0) {
+        if (G--, G === 0) {
           var e = {
             configurable: !0,
             enumerable: !0,
@@ -174,17 +174,17 @@ function at() {
               value: Ae
             }),
             group: h({}, e, {
-              value: re
+              value: oe
             }),
             groupCollapsed: h({}, e, {
-              value: oe
+              value: re
             }),
             groupEnd: h({}, e, {
               value: ge
             })
           });
         }
-        R < 0 && c("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
+        G < 0 && c("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
       }
     }
     var K = F.ReactCurrentDispatcher, J;
@@ -193,8 +193,8 @@ function at() {
         if (J === void 0)
           try {
             throw Error();
-          } catch (o) {
-            var n = o.stack.trim().match(/\n( *(at )?)/);
+          } catch (r) {
+            var n = r.stack.trim().match(/\n( *(at )?)/);
             J = n && n[1] || "";
           }
         return `
@@ -216,33 +216,33 @@ function at() {
       }
       var n;
       S = !0;
-      var o = Error.prepareStackTrace;
+      var r = Error.prepareStackTrace;
       Error.prepareStackTrace = void 0;
       var g;
       g = K.current, K.current = null, Ne();
       try {
         if (t) {
-          var r = function() {
+          var o = function() {
             throw Error();
           };
-          if (Object.defineProperty(r.prototype, "props", {
+          if (Object.defineProperty(o.prototype, "props", {
             set: function() {
               throw Error();
             }
           }), typeof Reflect == "object" && Reflect.construct) {
             try {
-              Reflect.construct(r, []);
+              Reflect.construct(o, []);
             } catch (a) {
               n = a;
             }
-            Reflect.construct(e, [], r);
+            Reflect.construct(e, [], o);
           } else {
             try {
-              r.call();
+              o.call();
             } catch (a) {
               n = a;
             }
-            e.call(r.prototype);
+            e.call(o.prototype);
           }
         } else {
           try {
@@ -272,7 +272,7 @@ function at() {
             }
         }
       } finally {
-        S = !1, K.current = g, Pe(), Error.prepareStackTrace = o;
+        S = !1, K.current = g, Pe(), Error.prepareStackTrace = r;
       }
       var I = e ? e.displayName || e.name : "", Y = I ? N(I) : "";
       return typeof e == "function" && P.set(e, Y), Y;
@@ -304,9 +304,9 @@ function at() {
           case C:
             return L(e.type, t, i);
           case Q: {
-            var n = e, o = n._payload, g = n._init;
+            var n = e, r = n._payload, g = n._init;
             try {
-              return L(g(o), t, i);
+              return L(g(r), t, i);
             } catch {
             }
           }
@@ -321,22 +321,22 @@ function at() {
       } else
         ce.setExtraStackFrame(null);
     }
-    function Te(e, t, i, n, o) {
+    function Te(e, t, i, n, r) {
       {
         var g = Function.call.bind(d);
-        for (var r in e)
-          if (g(e, r)) {
+        for (var o in e)
+          if (g(e, o)) {
             var A = void 0;
             try {
-              if (typeof e[r] != "function") {
-                var O = Error((n || "React class") + ": " + i + " type `" + r + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof e[r] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
+              if (typeof e[o] != "function") {
+                var O = Error((n || "React class") + ": " + i + " type `" + o + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof e[o] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
                 throw O.name = "Invariant Violation", O;
               }
-              A = e[r](t, r, n, i, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
+              A = e[o](t, o, n, i, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
             } catch (w) {
               A = w;
             }
-            A && !(A instanceof Error) && (W(o), c("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", n || "React class", i, r, typeof A), W(null)), A instanceof Error && !(A.message in Be) && (Be[A.message] = !0, W(o), c("Failed %s type: %s", i, A.message), W(null));
+            A && !(A instanceof Error) && (W(r), c("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", n || "React class", i, o, typeof A), W(null)), A instanceof Error && !(A.message in Be) && (Be[A.message] = !0, W(r), c("Failed %s type: %s", i, A.message), W(null));
           }
       }
     }
@@ -411,7 +411,7 @@ function at() {
         });
       }
     }
-    var $e = function(e, t, i, n, o, g, r) {
+    var $e = function(e, t, i, n, r, g, o) {
       var A = {
         // This tag allows us to uniquely identify this as a React Element
         $$typeof: D,
@@ -419,7 +419,7 @@ function at() {
         type: e,
         key: t,
         ref: i,
-        props: r,
+        props: o,
         // Record the component responsible for creating this element.
         _owner: g
       };
@@ -437,25 +437,25 @@ function at() {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: o
+        value: r
       }), Object.freeze && (Object.freeze(A.props), Object.freeze(A)), A;
     };
-    function et(e, t, i, n, o) {
+    function et(e, t, i, n, r) {
       {
-        var g, r = {}, A = null, O = null;
-        i !== void 0 && (ae(i), A = "" + i), Ze(t) && (ae(t.key), A = "" + t.key), Xe(t) && (O = t.ref, Ve(t, o));
+        var g, o = {}, A = null, O = null;
+        i !== void 0 && (ae(i), A = "" + i), Ze(t) && (ae(t.key), A = "" + t.key), Xe(t) && (O = t.ref, Ve(t, r));
         for (g in t)
-          d.call(t, g) && !ke.hasOwnProperty(g) && (r[g] = t[g]);
+          d.call(t, g) && !ke.hasOwnProperty(g) && (o[g] = t[g]);
         if (e && e.defaultProps) {
           var w = e.defaultProps;
           for (g in w)
-            r[g] === void 0 && (r[g] = w[g]);
+            o[g] === void 0 && (o[g] = w[g]);
         }
         if (A || O) {
           var u = typeof e == "function" ? e.displayName || e.name || "Unknown" : e;
-          A && qe(r, u), O && _e(r, u);
+          A && qe(o, u), O && _e(o, u);
         }
-        return $e(e, A, O, o, n, Me.current, r);
+        return $e(e, A, O, r, n, Me.current, o);
       }
     }
     var X = F.ReactCurrentOwner, He = F.ReactDebugCurrentFrame;
@@ -524,10 +524,10 @@ Check the top-level render call using <` + i + ">.");
         else if (V(e))
           e._store && (e._store.validated = !0);
         else if (e) {
-          var o = Ie(e);
-          if (typeof o == "function" && o !== e.entries)
-            for (var g = o.call(e), r; !(r = g.next()).done; )
-              V(r.value) && xe(r.value, t);
+          var r = Ie(e);
+          if (typeof r == "function" && r !== e.entries)
+            for (var g = r.call(e), o; !(o = g.next()).done; )
+              V(o.value) && xe(o.value, t);
         }
       }
     }
@@ -550,8 +550,8 @@ Check the top-level render call using <` + i + ">.");
           Te(i, e.props, "prop", n, e);
         } else if (t.PropTypes !== void 0 && !Z) {
           Z = !0;
-          var o = E(t);
-          c("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", o || "Unknown");
+          var r = E(t);
+          c("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", r || "Unknown");
         }
         typeof t.getDefaultProps == "function" && !t.getDefaultProps.isReactClassApproved && c("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
       }
@@ -569,10 +569,10 @@ Check the top-level render call using <` + i + ">.");
       }
     }
     var he = {};
-    function Ye(e, t, i, n, o, g) {
+    function Ye(e, t, i, n, r, g) {
       {
-        var r = Ue(e);
-        if (!r) {
+        var o = Ue(e);
+        if (!o) {
           var A = "";
           (e === void 0 || typeof e == "object" && e !== null && Object.keys(e).length === 0) && (A += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.");
           var O = tt();
@@ -580,10 +580,10 @@ Check the top-level render call using <` + i + ">.");
           var w;
           e === null ? w = "null" : k(e) ? w = "array" : e !== void 0 && e.$$typeof === D ? (w = "<" + (E(e.type) || "Unknown") + " />", A = " Did you accidentally export a JSX literal instead of a component?") : w = typeof e, c("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", w, A);
         }
-        var u = et(e, t, i, o, g);
+        var u = et(e, t, i, r, g);
         if (u == null)
           return u;
-        if (r) {
+        if (o) {
           var s = t.children;
           if (s !== void 0)
             if (n)
@@ -613,13 +613,13 @@ React keys must be passed directly to JSX without using spread:
         return e === z ? At(u) : nt(u), u;
       }
     }
-    function rt(e, t, i) {
+    function ot(e, t, i) {
       return Ye(e, t, i, !0);
     }
-    function ot(e, t, i) {
+    function rt(e, t, i) {
       return Ye(e, t, i, !1);
     }
-    var gt = ot, wt = rt;
+    var gt = rt, wt = ot;
     v.Fragment = z, v.jsx = gt, v.jsxs = wt;
   }()), v;
 }
@@ -666,5 +666,5 @@ const st = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWMAAAHsCAYAAAAHJMzsAA
   ] });
 };
 export {
-  Ht as default
+  Ht as RemoteComponentPOC
 };

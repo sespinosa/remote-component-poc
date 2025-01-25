@@ -1,0 +1,1 @@
+export { default as RemoteComponentPOC } from "./App.tsx";
