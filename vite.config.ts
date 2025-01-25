@@ -6,13 +6,14 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"), // Entry point
-      name: "RemoteComponentPOC",
-      fileName: (format) => `remote-component-poc.${format}.js`,
-      formats: ["es", "umd"],
+      entry: path.resolve(__dirname, "src/index.ts"), // Entry point for the library
+      name: "RemoteComponentPOC", // UMD global variable name
+      fileName: (format) => `remote-component-poc.${format}.js`, // Output file names
+      formats: ["es", "umd"], // Support both ES and UMD modules
     },
     rollupOptions: {
-      external: ["react", "react-dom"], // Mark react and react-dom as external
+      // Externalize react and react-dom to avoid bundling them
+      external: ["react", "react-dom"],
       output: {
         globals: {
           react: "React",
@@ -20,5 +21,14 @@ export default defineConfig({
         },
       },
     },
+  },
+  resolve: {
+    alias: {
+      react: path.resolve("./node_modules/react"), // Ensure React resolves correctly
+      "react-dom": path.resolve("./node_modules/react-dom"),
+    },
+  },
+  define: {
+    "process.env.NODE_ENV": JSON.stringify("production"), // Ensure proper environment variable replacement
   },
 });
