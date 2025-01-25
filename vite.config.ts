@@ -12,19 +12,15 @@ export default defineConfig({
       formats: ["es", "umd"], // Output both ES and UMD formats
     },
     rollupOptions: {
-      // Externalize dependencies to avoid bundling React and ReactDOM
-      external: ["react", "react-dom"],
+      // Do not mark React or ReactDOM as external to include them in the bundle
+      external: [], // Empty array ensures nothing is externalized
       output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-        },
+        globals: {}, // No global mappings needed since React is bundled
       },
     },
-    target: "esnext", // Use modern JavaScript for browser compatibility
+    target: "esnext", // Use modern JavaScript for compatibility with modern browsers
   },
   define: {
-    // Replace process.env with an empty object to avoid issues in the browser
-    "process.env": {},
+    "process.env": {}, // Replace process.env to avoid Node.js-specific errors
   },
 });
