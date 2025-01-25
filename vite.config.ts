@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
     lib: {
-      entry: "./src/main.tsx", // Entry point of your project
+      entry: "./src/App.tsx", // Entry point of your project
       name: "RemoteComponentPOC", // Global name for the library
       fileName: (format) => `remote-component-poc.${format}.js`,
       formats: ["es", "umd"], // Output both ES and UMD formats
